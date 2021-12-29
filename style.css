@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+}
+
+/* Entête du site */
+
+header{
+    /* linear-gradient permet d'avoir un dégrader de couleur de haute en bas 
+        url permet de mettre une image en fond*/
+    background-image: linear-gradient(rgba(0, 0, 255, 0.1), rgba(40, 156, 156, 0.01), rgba(40, 156, 156, 0.01), 
+                                      rgba(40, 156, 156, 0.01), rgba(40, 156, 156, 0.01), 
+                                      rgba(40, 156, 156, 0.01), rgba(40, 156, 156, 0.01),
+                                      rgba(40, 156, 156, 0.01), rgba(40, 156, 156, 0.01), white), url(img/montagne2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center;
+    background-attachment: fixed; */
+    padding-bottom: 100px;
+    color: white;
+}
+
+/* Eviter de surchager une classe quand on veut la réutiliser */
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* Permet d'ajouter un espace sur le haut de la nav */
+    padding-top: 20px;
+}
+
+header .container a{
+    color: white;
+    /* Supprime le soulignement des balises <a> */
+    text-decoration: none;
+}
+
+header .container ul{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+header .container ul li{
+    list-style: none;
+}
+
+/* Le sélécteur + permet d'agir sur toutes les balises sauf sur la première */
+header .container ul li + li{
+    padding-left: 20px;
+}
+
+header div{
+    text-align: center;
+    padding-top: 100px;
+}
+
+header div span{
+    background-color: black;
+    width: 100px;
+    height: 2px;
+    margin: 0 auto;
+    /* Les balises de type: (display: block;) prennent toute la largeur dispo et saute la ligne à chaque nouvel balise
+        Les balises de type: (display: inline;) prennent seulement l'espace dont elle ont besoin et ne saute pas de ligne 
+        
+        display Permet de changer le type de la balise span qui est de base (inline) en type (block)*/
+    display: block;
+}
+
+/* Le corps/contenu principal du site */
+
+main{
+    margin-top: 50px;
+}
+
+/* La partie info sur les voyages */
+
+#products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#products div + div{
+    padding-left: 50px;
+}
+
+#products div img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px black;
+    /* Permet de transfomer une dimension carré en dimension rond */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+#products div p{
+    text-align: justify;
+}
+
+/* Image de fond */
+
+.nature{
+    background-image: linear-gradient(rgba(0, 0, 255, 0.1), rgba(255, 255, 255, 0.1)), url(img/nature.jpeg);
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* le journal des commentaire clients  */
+
+#journal{
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+#journal h3, #journal p{
+    text-align: center;
+}
+
+/* commentaires */
+#journal .comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#journal .comment div + div{
+    padding-left: 50px;
+}
+
+#journal .comment div p{
+    text-align: justify;
+}
+
+/* Uilisateurs */
+#journal .comment .person{
+    display: flex;
+    flex-direction: row;
+}
+
+#journal .comment .person img{
+    width: 50px;
+}
+
+#journal .comment .person p + p{
+    font-size: 10px;
+}
+
+/* Dernière partie Last Trip */
+
+#lastTrip{
+    background-color: whitesmoke;
+    padding: 50px 0;
+    margin: 50px 0;
+}
+
+#lastTrip h3, #lastTrip p{
+    text-align: center;
+}
+
+#lastTrip .tripImg{
+    display: flex;
+    flex-direction: row;
+}
+
+#lastTrip .tripImg div + div{
+    padding-left: 50px;
+}
+
+#lastTrip .tripImg img{
+    width: 212.5px;
+    display: block;
+    margin: 0 auto;
+}
+
+#lastTrip .tripImg p{
+    text-align: justify;
+    width: 212.5px;
+}
+
+footer{
+    text-align: center;
+}
